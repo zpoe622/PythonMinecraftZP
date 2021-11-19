@@ -5,5 +5,5 @@ position = mc.player.getTilePos()
 x = position.x
 y = position.y
 z = position.z
-y = y/999999
+y = -1000000000000
 mc.player.setTilePos(x,y,z)
