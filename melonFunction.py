@@ -3,23 +3,17 @@ mc = Minecraft.create()
 
 import time
 
-pos = mc.player.getPos()
-x = pos.x
-y=pos.y
-z=pos.z
-mc.setBlock(x,y-1,z,103)
-time.sleep(10)
+def makeMelon(block,sleep,distance):
+    pos = mc.player.getPos()
+    x = pos.x
+    y = pos.y
+    z = pos.z
+    mc.setBlock(x,y-distance,z,block)
+    time.sleep(sleep)
+    
 
-pos = mc.player.getPos()
-x = pos.x
-y=pos.y-1
-z=pos.z
-mc.setBlock(x,y-1,z,103)
-time.sleep(10)
+count=(0)
 
-pos = mc.player.getPos()
-x = pos.x
-y=pos.y-1
-z=pos.z
-mc.setBlock(x,y-1,z,103)
-time.sleep(10)
+while count < 7:
+    makeMelon(103,10,1)
+    count += 1
