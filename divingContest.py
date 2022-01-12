@@ -6,10 +6,10 @@ score = 0
 pos = mc.player.getPos()
 blockAbove = mc.getBlock(pos.x, pos.y +2, pos.z)
 
-#ADD WHILE LOOP
-time.sleep(1)
-pos = mc.player.getPos()
-blockAbove = mc.getBlock(pos.x, pos.y+2, pos.z)
+while blockAbove == 8 or blockAbove == 9: 
+    time.sleep(1)
+    pos = mc.player.getPos()
+    blockAbove = mc.getBlock(pos.x, pos.y+2, pos.z)
 
 score = score + 1
 mc.postToChat("currwent score" +str(score))
